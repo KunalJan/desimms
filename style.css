@@ -47,13 +47,16 @@ button{cursor:pointer;font-family:var(--font)}
 }
 body.hide-header-ad .site-header .ad-header,
 body.hide-footer-ad .site-footer .ad-footer{
-  max-height:0;
-  opacity:0;
-  padding-top:0;
-  padding-bottom:0;
-  border-width:0;
-  margin:0;
-  pointer-events:none;
+  max-height:0 !important;
+  min-height:0 !important;
+  opacity:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  border-width:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  pointer-events:none !important;
+  display:none !important;
 }
 
 /* ── Site Header ── */

@@ -27,6 +27,59 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;min-height:100vh;overflow-x:hidden}
+.home-page{background:#000;color:#f3f4f6}
+.home-page .page-wrap{background:#000}
+.home-page .sec-head h2,
+.home-page .v-title,
+.home-page .v-meta,
+.home-page .footer-col h4,
+.home-page .footer-bottom,
+.home-page .footer-col a{color:inherit}
+.home-page .v-card,
+.home-page .site-footer,
+.home-page .site-header{background:#0b0b0b}
+.home-page .v-card{border-color:#222}
+.home-page .search-form{background:#111;border-color:#333}
+.home-page .search-form input{color:#f3f4f6}
+.home-page .search-form input::placeholder{color:#9ca3af}
+.home-page .page-btn{background:#111;color:#f3f4f6;border-color:#333}
+.home-page .page-btn:hover{background:#1f1f1f}
+.video-page-dark{background:#000;color:#f3f4f6}
+.video-page-dark .site-header,
+.video-page-dark .site-footer,
+.video-page-dark .related-section .rel-card,
+.video-page-dark .video-desc-box,
+.video-page-dark .stat-badge,
+.video-page-dark .tag,
+.video-page-dark .act-btn,
+.video-page-dark .back-link,
+.video-page-dark .sidebar-ad-box{background:#0b0b0b;color:#f3f4f6;border-color:#222}
+.video-page-dark .video-body,
+.video-page-dark .related-section,
+.video-page-dark .sidebar-sticky,
+.video-page-dark .vpage-wrap{background:#000}
+.video-page-dark .video-desc-box,
+.video-page-dark .stat-badge,
+.video-page-dark .tag,
+.video-page-dark .act-btn{border-color:#333}
+.video-page-dark .rel-title,
+.video-page-dark .video-big-title,
+.video-page-dark .chan-name,
+.video-page-dark .rel-meta,
+.video-page-dark .video-stats-row,
+.video-page-dark .back-link{color:#f3f4f6}
+.video-page-dark .act-btn:hover,
+.video-page-dark .tag:hover,
+.video-page-dark .back-link:hover{background:#1f1f1f}
+.video-page-dark .search-form{background:#111;border-color:#333}
+.video-page-dark .search-form input{color:#f3f4f6}
+.video-page-dark .search-form input::placeholder{color:#9ca3af}
+.video-page-dark .cat-sidebar{background:#111;border-right-color:#222}
+.video-page-dark .cat-sidebar-head,
+.video-page-dark .cat-sidebar-body{background:#111}
+.video-page-dark .cat-nav-item{color:#d1d5db}
+.video-page-dark .cat-nav-item:hover{background:#1f1f1f;color:#fff}
+.video-page-dark .cat-nav-item.active{background:rgba(233,69,96,.14)}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button{cursor:pointer;font-family:var(--font)}

@@ -98,7 +98,7 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
     .sidebar-more .rel-info{padding:8px 10px}
   </style>
 </head>
-<body>
+<body class="video-page-dark">
 
 <?php if($adPopup && !empty(trim($adPopup['popup_url'])) && !empty(trim($adPopup['ad_code']))): ?>
 

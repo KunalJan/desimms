@@ -69,7 +69,7 @@ $pageTitle = $search ? "Search: $search | $siteName" : ($cat ? ucfirst($cat)." V
   <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="site-preview.svg"/>
 </head>
-<body>
+<body class="home-page">
 
 <?php if($adPopup && !empty(trim($adPopup['popup_url'])) && !empty(trim($adPopup['ad_code']))): ?>
 

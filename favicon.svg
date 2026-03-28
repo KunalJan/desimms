@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="desimms icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#e94560"/>
+      <stop offset="100%" stop-color="#0077cc"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="168" cy="152" r="88" fill="url(#shine)"/>
+  <circle cx="368" cy="360" r="118" fill="#fff" opacity=".08"/>
+  <path d="M205 160c0-17 14-31 31-31h94c44 0 80 36 80 80v94c0 17-14 31-31 31h-63l31 54c6 10-1 23-13 23h-52c-10 0-19-5-24-14l-37-63H236c-17 0-31-14-31-31V160z" fill="#ffffff" opacity=".18"/>
+  <circle cx="256" cy="256" r="122" fill="#fff" opacity=".96"/>
+  <circle cx="256" cy="256" r="104" fill="#111827"/>
+  <path d="M233 210v92c0 8 9 13 16 9l77-46c7-4 7-13 0-17l-77-46c-7-4-16 1-16 8z" fill="#e94560"/>
+  <rect x="132" y="382" width="248" height="26" rx="13" fill="#ffffff" opacity=".18"/>
+</svg>

@@ -6,6 +6,8 @@ $siteName = getSetting($pdo,'site_name','desimms');
 <title>18 U.S.C. 2257 Compliance Statement | <?= h($siteName) ?></title>
 <meta name="description" content="18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement for <?= h($siteName) ?>."/>
 <meta name="robots" content="index,follow"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <link rel="stylesheet" href="style.css"/>
 </head><body>
 <header class="site-header">

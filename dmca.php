@@ -10,6 +10,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>DMCA Policy &amp; Content Removal | <?= h($siteName) ?></title>
 <meta name="description" content="DMCA takedown policy for <?= h($siteName) ?>. Submit a content removal request here."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <link rel="stylesheet" href="style.css"/>
 <style>
 .dmca-form label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin:12px 0 4px}

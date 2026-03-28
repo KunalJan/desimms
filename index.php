@@ -59,11 +59,15 @@ $pageTitle = $search ? "Search: $search | $siteName" : ($cat ? ucfirst($cat)." V
   <meta name="keywords"    content="<?= h($siteKw) ?>"/>
   <meta property="og:title"       content="<?= h($pageTitle) ?>"/>
   <meta property="og:description" content="<?= h($siteDesc) ?>"/>
+  <meta property="og:image"       content="<?= h(BASE_URL.'/site-preview.svg') ?>"/>
   <meta property="og:type"        content="website"/>
+  <meta name="twitter:card"       content="summary_large_image"/>
+  <meta name="twitter:image"      content="<?= h(BASE_URL.'/site-preview.svg') ?>"/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="<?= h(BASE_URL.'/index.php'.($cat?'?cat='.urlencode($cat):'')) ?>"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▶</text></svg>"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="apple-touch-icon" href="site-preview.svg"/>
 </head>
 <body>
 

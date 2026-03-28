@@ -22,6 +22,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 <title>Contact Us | <?= h($siteName) ?></title>
 <meta name="description" content="Contact <?= h($siteName) ?> — Get in touch with us for support, advertising, or general inquiries."/>
 <meta name="robots" content="index,follow"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <link rel="stylesheet" href="style.css"/>
 <style>
 .contact-grid{display:grid;grid-template-columns:1fr;gap:20px}

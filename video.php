@@ -65,6 +65,7 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
   <meta property="og:image"       content="<?= h($v['thumbnail']) ?>"/>
   <meta property="og:type"        content="video.other"/>
   <meta name="twitter:card"       content="summary_large_image"/>
+  <meta name="twitter:image"      content="<?= h($v['thumbnail']) ?>"/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="<?= h(BASE_URL.'/video.php?id='.$v['id']) ?>"/>
   <script type="application/ld+json"><?= json_encode([
@@ -79,7 +80,8 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
   ],JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT) ?></script>
   <?php endif; ?>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▶</text></svg>"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="apple-touch-icon" href="site-preview.svg"/>
   <style>
     /* Video page two-column layout on desktop */
     .vpage-wrap{max-width:1100px;margin:0 auto;display:flex;gap:20px;padding:0 14px 30px;align-items:flex-start}

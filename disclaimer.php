@@ -5,6 +5,8 @@ $siteName = getSetting($pdo,'site_name','desimms');
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Disclaimer | <?= h($siteName) ?></title>
 <meta name="description" content="Disclaimer for <?= h($siteName) ?>. Read our content and liability disclaimer."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <link rel="stylesheet" href="style.css"/>
 </head><body>
 <header class="site-header">

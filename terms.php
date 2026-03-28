@@ -6,6 +6,8 @@ $siteName = getSetting($pdo,'site_name','desimms');
 <title>Terms &amp; Conditions | <?= h($siteName) ?></title>
 <meta name="description" content="Terms and Conditions for <?= h($siteName) ?>. Read our terms of use before accessing our platform."/>
 <meta name="robots" content="index,follow"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <link rel="stylesheet" href="style.css"/>
 </head><body>
 <header class="site-header">

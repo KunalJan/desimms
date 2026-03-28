@@ -8,6 +8,8 @@ $siteDesc = getSetting($pdo,'site_description','');
 <meta name="description" content="Learn about <?= h($siteName) ?> — a free video sharing and streaming platform."/>
 <meta name="robots" content="index,follow"/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 </head><body>
 <header class="site-header">
   <div class="header-inner">

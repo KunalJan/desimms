@@ -6,6 +6,8 @@ $siteName = getSetting($pdo,'site_name','desimms');
 <title>Advertise with Us | <?= h($siteName) ?></title>
 <meta name="description" content="Advertise on <?= h($siteName) ?> and reach thousands of engaged viewers. Learn about our ad placements."/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="site-preview.svg"/>
 <style>
 .adspot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
 @media(max-width:500px){.adspot-grid{grid-template-columns:1fr}}

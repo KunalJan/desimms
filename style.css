@@ -96,32 +96,6 @@ button{cursor:pointer;font-family:var(--font)}
 .ad-header{border-bottom:1px solid var(--border)}
 .ad-footer{border-top:1px solid var(--border);margin-top:0}
 .ad-content{margin:14px 0;border-radius:var(--radius-sm);border:1px dashed rgba(233,69,96,.3)}
-/* Keep header/footer ads hidden until the user returns to top/bottom */
-.site-header .ad-header,
-.site-footer .ad-footer{
-  max-height:240px;
-  opacity:1;
-  transition:max-height .25s ease,opacity .2s ease,padding .25s ease,border-width .25s ease,margin .25s ease;
-}
-body.hide-header-ad .site-header .ad-header,
-body.hide-footer-ad .site-footer .ad-footer{
-  max-height:0 !important;
-  min-height:0 !important;
-  opacity:0 !important;
-  padding-top:0 !important;
-  padding-bottom:0 !important;
-  border-width:0 !important;
-  margin:0 !important;
-  overflow:hidden !important;
-  pointer-events:none !important;
-}
-/* Keep header hard-hidden, but avoid footer display toggling that causes bottom flicker */
-body.hide-header-ad .site-header .ad-header{
-  display:none !important;
-}
-body.hide-footer-ad .site-footer .ad-footer{
-  visibility:hidden !important;
-}
 
 /* ── Site Header ── */
 .site-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,0.06)}

@@ -407,26 +407,9 @@ function shareVideo(){
   else{ navigator.clipboard.writeText(location.href).then(()=>alert('Link copied!')); }
 }
 const st=document.getElementById('scrollTop');
-function syncEdgeAds(){
-  const scrollTop = window.scrollY || window.pageYOffset;
-  const viewportBottom = scrollTop + window.innerHeight;
-  const pageBottom = document.documentElement.scrollHeight;
-  const showFooterAt = pageBottom - 20;
-  const hideFooterAt = pageBottom - 140;
-  const footerVisible = !document.body.classList.contains('hide-footer-ad');
-  document.body.classList.toggle('hide-header-ad', scrollTop > 5);
-  if (footerVisible) {
-    document.body.classList.toggle('hide-footer-ad', viewportBottom < hideFooterAt);
-  } else {
-    document.body.classList.toggle('hide-footer-ad', viewportBottom < showFooterAt);
-  }
-}
 window.addEventListener('scroll',()=>{
   st.classList.toggle('show',scrollY>300);
-  syncEdgeAds();
 },{passive:true});
-window.addEventListener('resize',syncEdgeAds);
-syncEdgeAds();
 st.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>

@@ -1,21 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="desimms icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="desimms.de icon">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="55%" stop-color="#e94560"/>
-      <stop offset="100%" stop-color="#0077cc"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b050d"/>
+      <stop offset="55%" stop-color="#140107"/>
+      <stop offset="100%" stop-color="#090000"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".28"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7d2"/>
+      <stop offset="35%" stop-color="#f7d78a"/>
+      <stop offset="70%" stop-color="#dca64c"/>
+      <stop offset="100%" stop-color="#fff0b8"/>
     </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.9 0 1 0 0 0.7 0 0 1 0 0.3 0 0 0 0.55 0"/>
+    </filter>
   </defs>
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="168" cy="152" r="88" fill="url(#shine)"/>
-  <circle cx="368" cy="360" r="118" fill="#fff" opacity=".08"/>
-  <path d="M205 160c0-17 14-31 31-31h94c44 0 80 36 80 80v94c0 17-14 31-31 31h-63l31 54c6 10-1 23-13 23h-52c-10 0-19-5-24-14l-37-63H236c-17 0-31-14-31-31V160z" fill="#ffffff" opacity=".18"/>
-  <circle cx="256" cy="256" r="122" fill="#fff" opacity=".96"/>
-  <circle cx="256" cy="256" r="104" fill="#111827"/>
-  <path d="M233 210v92c0 8 9 13 16 9l77-46c7-4 7-13 0-17l-77-46c-7-4-16 1-16 8z" fill="#e94560"/>
-  <rect x="132" y="382" width="248" height="26" rx="13" fill="#ffffff" opacity=".18"/>
+  <rect width="512" height="512" rx="88" fill="url(#bg)"/>
+  <ellipse cx="256" cy="154" rx="150" ry="60" fill="#ffcf8a" opacity=".06" filter="url(#softGlow)"/>
+  <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M222 186l34-38 34 38" stroke-width="12"/>
+    <path d="M192 194l30-14 34 32 34-32 30 14" stroke-width="12"/>
+    <path d="M206 206c12 10 24 15 50 15s38-5 50-15" stroke-width="10"/>
+    <path d="M220 212v18M292 212v18" stroke-width="10"/>
+  </g>
+  <g fill="url(#gold)" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="256" y="336" font-size="86" letter-spacing="-2">desimms.de</text>
+  </g>
+  <rect x="110" y="372" width="292" height="18" rx="9" fill="#f7d78a" opacity=".12"/>
 </svg>

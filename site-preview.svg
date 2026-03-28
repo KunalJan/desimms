@@ -1,23 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="desimms preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="desimms.de preview">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="55%" stop-color="#e94560"/>
-      <stop offset="100%" stop-color="#0077cc"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b050d"/>
+      <stop offset="55%" stop-color="#140107"/>
+      <stop offset="100%" stop-color="#090000"/>
     </linearGradient>
-    <radialGradient id="glow" cx="30%" cy="25%" r="80%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity=".25"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7d2"/>
+      <stop offset="35%" stop-color="#f7d78a"/>
+      <stop offset="70%" stop-color="#dca64c"/>
+      <stop offset="100%" stop-color="#fff0b8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.9 0 1 0 0 0.7 0 0 1 0 0.3 0 0 0 0.5 0"/>
+    </filter>
   </defs>
   <rect width="1200" height="630" rx="48" fill="url(#bg)"/>
-  <rect x="40" y="40" width="1120" height="550" rx="40" fill="#ffffff" opacity=".06"/>
-  <circle cx="240" cy="160" r="220" fill="url(#glow)"/>
-  <circle cx="960" cy="480" r="260" fill="#ffffff" opacity=".07"/>
-  <circle cx="278" cy="315" r="126" fill="#ffffff"/>
-  <circle cx="278" cy="315" r="108" fill="#111827"/>
-  <path d="M252 266v98c0 9 10 14 17 9l84-49c7-4 7-14 0-18l-84-49c-7-4-17 1-17 9z" fill="#e94560"/>
-  <text x="460" y="280" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">desimms</text>
-  <text x="460" y="350" fill="#e5e7eb" font-family="Arial, Helvetica, sans-serif" font-size="34">Watch Anything, Anywhere</text>
-  <text x="460" y="415" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="24">Free video sharing platform</text>
+  <circle cx="600" cy="295" r="290" fill="#fff1bf" opacity=".04" filter="url(#softGlow)"/>
+  <g transform="translate(0 10)">
+    <g fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M500 160l100-112 100 112" stroke-width="18"/>
+      <path d="M414 182l86-40 100 96 100-96 86 40" stroke-width="16"/>
+      <path d="M454 196c36 28 74 42 146 42s110-14 146-42" stroke-width="14"/>
+      <path d="M486 210v30M714 210v30" stroke-width="14"/>
+    </g>
+    <text x="600" y="360" fill="url(#gold)" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" text-anchor="middle" letter-spacing="-2">desimms.de</text>
+    <rect x="280" y="404" width="640" height="20" rx="10" fill="#f7d78a" opacity=".12"/>
+  </g>
+  <text x="600" y="500" fill="#f3e7cc" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">Watch Anything, Anywhere</text>
 </svg>

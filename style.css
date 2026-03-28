@@ -27,6 +27,10 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;min-height:100vh;overflow-x:hidden}
+html.home-page, body.home-page,
+html.video-page-dark, body.video-page-dark{
+  background:#000 !important;
+}
 .home-page{background:#000;color:#f3f4f6}
 .home-page .page-wrap{background:#000}
 .home-page .sec-head h2,
@@ -80,6 +84,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
 .video-page-dark .cat-nav-item{color:#d1d5db}
 .video-page-dark .cat-nav-item:hover{background:#1f1f1f;color:#fff}
 .video-page-dark .cat-nav-item.active{background:rgba(233,69,96,.14)}
+html.home-page, html.video-page-dark{min-height:100%}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button{cursor:pointer;font-family:var(--font)}

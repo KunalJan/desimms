@@ -1,18 +1,31 @@
 <?php
 require_once 'config.php';
 
+$slug = trim($_GET['slug'] ?? '');
 $id = (int)($_GET['id'] ?? 0);
-if(!$id) { header('Location: index.php'); exit; }
+if ($slug === '' && !$id) { header('Location: index.php'); exit; }
 
-$video = $pdo->prepare("SELECT * FROM videos WHERE id = ?");
-$video->execute([$id]);
+if ($slug !== '') {
+    $video = $pdo->prepare("SELECT * FROM videos WHERE slug = ?");
+    $video->execute([$slug]);
+} else {
+    $video = $pdo->prepare("SELECT * FROM videos WHERE id = ?");
+    $video->execute([$id]);
+}
 $v = $video->fetch();
 
 if(!$v) { http_response_code(404); }
 
+$videoId = $v ? (int)$v['id'] : 0;
+
+if ($v && $slug === '' && !empty($v['slug'])) {
+    header('Location: ' . videoPath($v), true, 301);
+    exit;
+}
+
 // Increment views
 if($v) {
-    $pdo->prepare("UPDATE videos SET views=views+1 WHERE id=?")->execute([$id]);
+    $pdo->prepare("UPDATE videos SET views=views+1 WHERE id=?")->execute([$videoId]);
     $v['views']++;
 }
 
@@ -21,12 +34,12 @@ $related = [];
 if($v) {
     // Step 1: same category, excluding current video
     $rel = $pdo->prepare("SELECT * FROM videos WHERE id != ? AND category = ? ORDER BY views DESC LIMIT 6");
-    $rel->execute([$id, $v['category']]);
+    $rel->execute([$videoId, $v['category']]);
     $related = $rel->fetchAll();
 
     // Step 2: if fewer than 4, fill up with any other videos
     if(count($related) < 4) {
-        $excludeIds   = array_merge([$id], array_column($related, 'id'));
+        $excludeIds   = array_merge([$videoId], array_column($related, 'id'));
         $placeholders = implode(',', array_fill(0, count($excludeIds), '?'));
         $more = $pdo->prepare("SELECT * FROM videos WHERE id NOT IN($placeholders) ORDER BY views DESC LIMIT 6");
         $more->execute($excludeIds);
@@ -72,10 +85,11 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
   <meta property="og:description" content="<?= h($seoDesc) ?>"/>
   <meta property="og:image"       content="<?= h($v['thumbnail']) ?>"/>
   <meta property="og:type"        content="video.other"/>
+  <meta property="og:url"         content="<?= h(videoUrl($v)) ?>"/>
   <meta name="twitter:card"       content="summary_large_image"/>
   <meta name="twitter:image"      content="<?= h($v['thumbnail']) ?>"/>
   <meta name="robots" content="index,follow"/>
-  <link rel="canonical" href="<?= h(BASE_URL.'/video.php?id='.$v['id']) ?>"/>
+  <link rel="canonical" href="<?= h(videoUrl($v)) ?>"/>
   <script type="application/ld+json"><?= json_encode([
     '@context'=>'https://schema.org',
     '@type'=>'VideoObject',
@@ -272,7 +286,7 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
       <div class="related-list">
         <?php foreach($related as $ri => $r): ?>
 
-          <a class="rel-card" href="video.php?id=<?= (int)$r['id'] ?>">
+          <a class="rel-card" href="<?= h(videoPath($r)) ?>">
             <div class="rel-thumb">
               <img src="<?= h($r['thumbnail']?:('https://picsum.photos/seed/v'.$r['id'].'/400/225')) ?>"
                    alt="<?= h($r['title']) ?>" loading="lazy" width="130" height="73"/>
@@ -318,7 +332,7 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
         <h4>🎬 More Videos</h4>
         <div class="related-list">
           <?php foreach(array_slice($related,0,4) as $r): ?>
-            <a class="rel-card" href="video.php?id=<?= (int)$r['id'] ?>" style="flex-direction:column">
+            <a class="rel-card" href="<?= h(videoPath($r)) ?>" style="flex-direction:column">
               <div class="rel-thumb" style="width:100%;min-height:120px">
                 <img src="<?= h($r['thumbnail']?:('https://picsum.photos/seed/v'.$r['id'].'/300/170')) ?>"
                      alt="<?= h($r['title']) ?>" loading="lazy" style="width:100%;height:120px;object-fit:cover"/>

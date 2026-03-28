@@ -302,7 +302,7 @@ document.addEventListener('keydown',function(e){
       foreach($videos as $v):
         $cardIndex++;
     ?>
-      <a class="v-card" href="video.php?id=<?= (int)$v['id'] ?>">
+      <a class="v-card" href="<?= h(videoPath($v)) ?>">
         <div class="v-thumb">
           <img src="<?= h($v['thumbnail']?:('https://picsum.photos/seed/v'.$v['id'].'/400/225')) ?>"
                alt="<?= h($v['title']) ?>" loading="lazy" width="400" height="225"/>

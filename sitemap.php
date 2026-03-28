@@ -3,7 +3,7 @@ require_once 'config.php';
 header('Content-Type: application/xml; charset=utf-8');
 
 $base    = rtrim(BASE_URL,'/');
-$videos  = $pdo->query("SELECT slug,created_at FROM videos ORDER BY created_at DESC")->fetchAll();
+$videos  = $pdo->query("SELECT id,slug,created_at FROM videos ORDER BY created_at DESC")->fetchAll();
 $cats    = $pdo->query("SELECT slug FROM categories")->fetchAll();
 
 function xml(string $value): string {
@@ -51,7 +51,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
   <!-- Video pages -->
   <?php foreach($videos as $v): ?>
   <url>
-    <loc><?= xml($base . '/video.php?slug=' . urlencode($v['slug'])) ?></loc>
+    <loc><?= xml(videoUrl($v)) ?></loc>
     <lastmod><?= date('Y-m-d', strtotime($v['created_at'])) ?></lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

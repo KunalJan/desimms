@@ -56,6 +56,15 @@ function h(string $s): string { return htmlspecialchars($s,ENT_QUOTES,'UTF-8'); 
 function getCategories(PDO $db): array {
     return $db->query("SELECT * FROM categories ORDER BY name")->fetchAll();
 }
+function videoPath(array $video): string {
+    if (!empty($video['slug'])) {
+        return 'video.php?slug=' . rawurlencode($video['slug']);
+    }
+    return 'video.php?id=' . (int)($video['id'] ?? 0);
+}
+function videoUrl(array $video): string {
+    return rtrim(BASE_URL, '/') . '/' . ltrim(videoPath($video), '/');
+}
 if(!defined('ADMIN') && getSetting($pdo,'maintenance_mode')==='1'){
     http_response_code(503);
     die('<!DOCTYPE html><html><body style="font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;background:#f0f2f5;margin:0"><div style="text-align:center;background:#fff;padding:40px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)"><div style="font-size:48px">🔧</div><h2>Under Maintenance</h2><p style="color:#666">We\'ll be back soon!</p></div></body></html>');

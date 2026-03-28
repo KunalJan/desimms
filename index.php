@@ -176,7 +176,7 @@ setTimeout(function(){
 .cat-sidebar{
   position:fixed;top:0;left:-280px;
   width:265px;height:100%;
-  background:#fff;
+  background:var(--card);
   border-right:1px solid var(--border);
   box-shadow:4px 0 24px rgba(0,0,0,.12);
   z-index:201;
@@ -191,7 +191,7 @@ setTimeout(function(){
   justify-content:space-between;
   padding:16px 18px 14px;
   border-bottom:1px solid var(--border);
-  background:#fff;
+  background:var(--card);
   position:sticky;top:0;z-index:1
 }
 .cat-sidebar-title{
@@ -229,7 +229,7 @@ setTimeout(function(){
 /* ── Active category bar ── */
 .active-cat-bar{
   display:flex;align-items:center;gap:8px;
-  padding:5px 14px;background:#fff8f9;
+  padding:5px 14px;background:rgba(233,69,96,.12);
   border-top:1px solid rgba(233,69,96,.15);
   font-size:12px;color:var(--muted)
 }
@@ -246,7 +246,7 @@ setTimeout(function(){
 /* Small ad strip below categories */
 .ad-cat-strip{
   padding:4px 10px;
-  background:#f8f9fc;
+  background:var(--card);
   border-top:0;
   border-left:0;
   border-right:0;

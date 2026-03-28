@@ -160,9 +160,9 @@ $tags     = $v ? array_filter(array_map('trim', explode(',', $v['tags']??''))) :
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .cat-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;backdrop-filter:blur(2px)}
 .cat-overlay.show{display:block}
-.cat-sidebar{position:fixed;top:0;left:-280px;width:265px;height:100%;background:#fff;border-right:1px solid var(--border);box-shadow:4px 0 24px rgba(0,0,0,.12);z-index:201;display:flex;flex-direction:column;transition:left .27s cubic-bezier(.4,0,.2,1);overflow:hidden}
+.cat-sidebar{position:fixed;top:0;left:-280px;width:265px;height:100%;background:var(--card);border-right:1px solid var(--border);box-shadow:4px 0 24px rgba(0,0,0,.12);z-index:201;display:flex;flex-direction:column;transition:left .27s cubic-bezier(.4,0,.2,1);overflow:hidden}
 .cat-sidebar.open{left:0}
-.cat-sidebar-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 14px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:1}
+.cat-sidebar-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 14px;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:1}
 .cat-sidebar-title{font-family:var(--font-h);font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--accent);text-transform:uppercase}
 .cat-sidebar-close{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:4px 7px;border-radius:6px;transition:all .15s;line-height:1}
 .cat-sidebar-close:hover{background:var(--hover);color:var(--text)}

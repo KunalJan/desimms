@@ -5,21 +5,21 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --white:#ffffff;
-  --bg:#f0f2f6;
-  --card:#ffffff;
-  --input:#f4f6f9;
-  --hover:#eaecf1;
-  --border:rgba(0,0,0,0.09);
+  --white:#0b0b0f;
+  --bg:#000000;
+  --card:#0f1015;
+  --input:#14161c;
+  --hover:#1b1f27;
+  --border:rgba(255,255,255,0.1);
   --accent:#e94560;
   --accent-dark:#c73650;
   --blue:#0077cc;
   --gold:#d97706;
-  --text:#111827;
-  --text2:#374151;
-  --muted:#6b7280;
-  --shadow:0 2px 12px rgba(0,0,0,0.08);
-  --shadow-hover:0 6px 24px rgba(0,0,0,0.13);
+  --text:#f5f5f7;
+  --text2:#d1d5db;
+  --muted:#9ca3af;
+  --shadow:0 2px 12px rgba(0,0,0,0.35);
+  --shadow-hover:0 6px 24px rgba(0,0,0,0.5);
   --radius:10px;
   --radius-sm:6px;
   --font-h:'Barlow Condensed',sans-serif;
@@ -120,7 +120,7 @@ body.hide-footer-ad .site-footer .ad-footer{
 /* ── Site Header ── */
 .site-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 .header-inner{display:flex;align-items:center;gap:10px;padding:10px 14px;max-width:1200px;margin:0 auto}
-.logo{font-family:var(--font-h);font-size:28px;font-weight:900;letter-spacing:-.5px;color:var(--text);white-space:nowrap;flex-shrink:0}
+.logo{font-family:var(--font-h);font-size:28px;font-weight:900;letter-spacing:-.5px;color:#fff;white-space:nowrap;flex-shrink:0}
 .logo span{color:var(--accent)}
 .search-form{flex:1;display:flex;background:var(--input);border:1px solid var(--border);border-radius:50px;overflow:hidden;transition:border-color .2s,box-shadow .2s;max-width:500px}
 .search-form:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,119,204,.1)}
@@ -186,7 +186,7 @@ body.hide-footer-ad .site-footer .ad-footer{
 .footer-col a{display:block;font-size:12px;color:var(--muted);padding:3px 0;transition:color .15s}
 .footer-col a:hover{color:var(--accent)}
 .footer-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
-.footer-logo{font-family:var(--font-h);font-size:20px;font-weight:900;color:var(--text)}
+.footer-logo{font-family:var(--font-h);font-size:20px;font-weight:900;color:#fff}
 .footer-logo span{color:var(--accent)}
 
 /* ── Video Page ── */
@@ -239,7 +239,7 @@ body.hide-footer-ad .site-footer .ad-footer{
 /* ── Popup Ad ── */
 .popup-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center}
 .popup-overlay.show{display:flex}
-.popup-box{background:#fff;border-radius:var(--radius);overflow:hidden;max-width:500px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.popup-box{background:#111318;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;max-width:500px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .popup-close{position:absolute;top:8px;right:10px;background:rgba(0,0,0,.5);border:none;color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2}
 .popup-close:hover{background:rgba(0,0,0,.8)}
 

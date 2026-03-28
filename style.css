@@ -114,7 +114,13 @@ body.hide-footer-ad .site-footer .ad-footer{
   margin:0 !important;
   overflow:hidden !important;
   pointer-events:none !important;
+}
+/* Keep header hard-hidden, but avoid footer display toggling that causes bottom flicker */
+body.hide-header-ad .site-header .ad-header{
   display:none !important;
+}
+body.hide-footer-ad .site-footer .ad-footer{
+  visibility:hidden !important;
 }
 
 /* ── Site Header ── */

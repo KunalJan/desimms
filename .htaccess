@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# SEO-friendly sitemap URL
+RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]

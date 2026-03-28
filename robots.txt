@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /uploads/
+Disallow: /AmritKun2002/
 
-Sitemap: http://desimms.de/sitemap.php
+Sitemap: https://desimms.de/sitemap.xml

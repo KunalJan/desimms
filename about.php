@@ -3,6 +3,14 @@ $siteName = getSetting($pdo,'site_name','desimms');
 $siteDesc = getSetting($pdo,'site_description','');
 ?><!DOCTYPE html>
 <html lang="en"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL5VP34PWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZL5VP34PWP');
+</script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>About Us | <?= h($siteName) ?></title>
 <meta name="description" content="Learn about <?= h($siteName) ?> — a free video sharing and streaming platform."/>
